@@ -34,6 +34,7 @@ public class FrontControllerServletV2 extends HttpServlet {
 
         if (controller == null) {
             response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+            return;
         }
 
         MyView view = controller.process(request, response);
